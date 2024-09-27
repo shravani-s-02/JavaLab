@@ -1,0 +1,39 @@
+package Q_2_Numbers;
+
+public class IMTechInteger {
+	int num = 0, num_digits = String.valueOf(num).length();
+	boolean is_prime;
+	
+	IMTechInteger(int num){
+		this.num = num;
+	}
+	
+	public int getNumDigits() {
+		return num;
+	}
+	
+	public int getDigit(int dnum) {
+		int count = 0, temp = 0;
+		dnum--;
+		while( count <= dnum) {
+			temp = num/10;
+			temp = temp % 10;
+		}
+		
+		return temp;
+	}
+	
+	public boolean isPrime() {
+		int i = 0;
+		
+		while( i < num/2) {	
+			if(num % i == 0) {
+				 is_prime = false;
+			}
+			i++;
+		}
+		
+		is_prime = true;
+		return is_prime;
+	}
+}

@@ -1,0 +1,19 @@
+.root{
+	-fx-background-color:mistyrose;
+	-fx-alignment:center;
+	-fx-background-radius: 200;
+}
+.label{
+	-fx-font:bold 10pt "Arial";
+	-fx-alignment:center;
+	-fx-padding:10;
+}
+.button{
+	-fx-effect:dropshadow(one-pass-box, black, 8, 0.0, 2, 0);
+	-fx-border-radius:20;
+	-fx-font:normal 10pt "Time New Roman"; 
+}
+.title{
+	-fx-font:bolder 10pt "Garamond";
+	-fx-effect:dropshadow(one-pass-box, grey, 8, 0.0, 2, 0); 
+}

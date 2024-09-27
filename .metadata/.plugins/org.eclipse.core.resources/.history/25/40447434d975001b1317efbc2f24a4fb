@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class Q_3_SumLoop {
+
+	static Scanner enter = new Scanner(System.in);
+	
+	public static String Continue() {
+		System.out.print("\nDo you wish to perform the operation again?(yes/no)");
+		String string = enter.nextLine();
+		
+		if( string == "yes") {
+			return string;
+		}
+		else if( string == "no") {
+			System.exit(0);
+		}
+		else{
+			System.out.print("Option entered is invalid, respond with either yes or no.");
+			Continue();
+		}
+		return string;		
+	}
+	
+	public static void main(String[] args) {
+		String cont = "yes";
+		while( cont == "yes") {
+			System.out.print("Enter two numbers to find the sum of.");
+			System.out.print("\nEnter the first number:");
+	        double number1 = enter.nextDouble();
+	        System.out.print("Enter the second number:");
+	        double number2 = enter.nextDouble();
+	       
+	        double sum = number1 + number2;
+	        System.out.print("Sum of " + number1 +" and " + number2 + " is " + sum);
+	        
+	        cont = Continue();
+		}
+		enter.close();
+	}
+
+}

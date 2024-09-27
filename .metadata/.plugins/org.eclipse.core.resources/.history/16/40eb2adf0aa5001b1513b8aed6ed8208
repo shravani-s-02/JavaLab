@@ -1,0 +1,147 @@
+package Q2_TextDetails;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
+import java.util.StringTokenizer;
+
+import javax.swing.*; 
+
+public class TextDetailsDisplay {
+	
+	JButton displayButton;
+	JTextField enterText; 
+	JLabel characterCount, wordCount, longestWord, shortestWord;
+	
+	public class DisplayTextDetails extends JFrame implements WindowListener, ActionListener{
+		DisplayTextDetails() {
+			JFrame Display = new JFrame();
+			
+			displayButton = new JButton("Display");
+			enterText = new JTextField();
+			characterCount = new JLabel();
+			wordCount = new JLabel();
+			longestWord = new JLabel();
+			shortestWord = new JLabel();
+			
+			enterText.setBounds(100, 100, 100, 20);
+			displayButton.setBounds(200, 100, 100, 20);
+			characterCount.setBounds(250, 150, 100, 20);
+			wordCount.setBounds(300, 150, 100, 20);
+			longestWord.setBounds(350, 150, 100, 20);
+			shortestWord.setBounds(400, 150, 100, 20);
+			
+			displayButton.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					FindTextDetails text = new FindTextDetails(enterText.getText());
+					String text = enterText.getText();
+					
+					characterCount.setText(String.valueOf("Number of characters : " + findCharCount(text)));
+					wordCount.setText(String.valueOf("Number of words : " + findWordCount(text)));
+					longestWord.setText("Longest word/s : " + findLongestWord(text));
+					shortestWord.setText("Shortest word/s : " + findShortestWord(text));
+				}
+			});
+			
+			Display.add(displayButton);
+			Display.add(enterText);
+			Display.add(characterCount);
+			Display.add(wordCount);
+			Display.add(longestWord);
+			Display.add(shortestWord);
+
+			Display.setSize(500, 500);
+			Display.setLayout(null);
+			Display.setVisible(true);
+		}
+		
+		public void windowClosing(WindowEvent e) {
+			dispose();
+            System.exit(0);
+		}
+		
+		public void actionPerformed(ActionEvent e) {}
+		public void windowOpened(WindowEvent e) {}
+		public void windowClosed(WindowEvent e) {}
+		public void windowIconified(WindowEvent e) {}
+		public void windowDeiconified(WindowEvent e) {}
+		public void windowActivated(WindowEvent e) {}
+		public void windowDeactivated(WindowEvent e) {}
+	}
+	
+	int findCharCount(String text) {
+		int count = 0, i = 0;
+		
+		for(i = 0; i < text.length(); i++) {
+			if(text.substring(i) != " " ) {
+				count++;
+			}
+		}
+		
+		return count;
+	}
+	
+	int findWordCount(String text) {
+		int count = 0;
+		StringTokenizer st = new StringTokenizer(text);
+		
+		while(st.hasMoreTokens()) {
+			count++;
+		}
+		
+		return count;
+	}
+	
+	String findLongestWord(String text) {
+		String compareTo, longestTokens, longestTokenYet;
+		StringTokenizer st = new StringTokenizer(text);
+		longestTokenYet = st.nextToken();
+		longestTokens = longestTokenYet;
+		
+		//The all the tokens lengths are compared and the longest one is stored in the longestTokens string which is returned 
+		while(st.hasMoreTokens()) {
+			compareTo = st.nextToken();
+			//If a token has the same length as the longest token found so far it is added on to the string storing the longest tokens  
+			if(compareTo.length() == longestTokenYet.length()) {
+				longestTokens = longestTokens + ", " + compareTo;
+				longestTokenYet = compareTo;
+			}
+			else if(compareTo.length() > longestTokenYet.length()) {
+				longestTokens = compareTo;
+				longestTokenYet = compareTo;
+			}
+		}
+		
+		return longestTokens;
+	}
+	
+	String findShortestWord(String text) {
+		String compareTo;
+		StringTokenizer st = new StringTokenizer(text);
+		String shortestTokenYet = st.nextToken();
+		String shortestTokens = shortestTokenYet;
+		
+		//The all the tokens lengths are compared and the shortest one is stored in the shortestTokens string which is returned 
+		while(st.hasMoreTokens()) {
+			compareTo = st.nextToken();
+			//If a token has the same length as the shortest token found so far it is added on to the string storing the shortest tokens  
+			if(compareTo.length() == shortestTokenYet.length()) {
+				shortestTokens = shortestTokens + ", " + compareTo;
+				shortestTokenYet = compareTo;
+			}
+			else if(compareTo.length() < shortestTokenYet.length()) {
+				shortestTokens = compareTo;
+				shortestTokenYet = compareTo;
+			}
+		}
+		
+		return shortestTokens;
+	}
+	
+	public static void main(String[] args) {
+		TextDetailsDisplay Q2 = new TextDetailsDisplay();
+		
+		DisplayTextDetails display = Q2.new DisplayTextDetails();
+	}
+
+}

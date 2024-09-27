@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;VegetableShop.java&apos; to &apos;19MCME01_E7/src/Shops&apos;&#x0D;&#x0A;- Original project: &apos;19MCME01_E6&apos;&#x0D;&#x0A;- Destination element: &apos;19MCME01_E7/src/Shops&apos;&#x0D;&#x0A;- Original element: &apos;Q2_VegetableShopping.VegetableShop.java&apos;" description="Copy compilation unit" destination="=19MCME01_E7/src&lt;Shops" element1="/src&lt;Q2_VegetableShopping{VegetableShop.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1617518022618" units="1" version="1.0"/>
+</session>

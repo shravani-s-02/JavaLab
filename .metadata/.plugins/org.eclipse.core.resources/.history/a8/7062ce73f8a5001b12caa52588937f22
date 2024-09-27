@@ -1,0 +1,9 @@
+package Q4_PinVerification;
+
+public class PinVerification {
+	String pin = "3214";
+	
+	public boolean Verify(String enteredPin) {
+		return pin.equals(enteredPin);
+	}
+}

@@ -1,0 +1,58 @@
+
+import java.awt.Button;
+import java.awt.FlowLayout;
+import java.awt.Frame;
+import java.awt.Label;
+import java.awt.TextField;
+
+public class Q1_CelciusAndFarenheitConvertor {
+	
+	class TempUnitConvertor{
+		TempUnitConvertor(){
+			//Frame Converter =new Frame();
+			//Creating Frame    
+		      Frame converter = new Frame();       
+		     
+		      Button convert = new Button("Convert"); 
+		      Button mode = new Button();
+		      
+		      Label lb = new Label("UserId: "), result = new Label();
+		      
+		      convert.setBounds(50,50,50,50);  
+		      // setting button position on screen
+		      mode.setBounds(50,50,50,50);  
+		      
+		      //adding button into frame 
+		      converter.add(b);
+		      
+		      
+		      //Creating a label
+		      Label lb = new Label("UserId: "); 
+		      
+		      //adding label to the frame
+		      converter.add(lb);           
+		      
+		      //Creating Text Field
+		      TextField t = new TextField();
+		      
+		      //adding text field to the frame
+		      converter.add(t);
+		      
+		      //setting frame size
+		      converter.setSize(500, 300);  
+		      
+		      //Setting the layout for the Frame
+		      converter.setLayout(new FlowLayout());
+		            
+		      converter.setVisible(true);  
+		}
+	}
+	
+	public static void main(String[] args) {
+		sQ1_CelciusAndFarenheitConvertor Q1 = new Q1_CelciusAndFarenheitConvertor();
+
+		TempUnitConvertor ex = Q1.new TempUnitConvertor();
+
+	}
+
+}

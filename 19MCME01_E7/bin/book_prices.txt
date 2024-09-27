@@ -1,0 +1,9 @@
+The C Programming Language,145.00
+C++ Unplugged,500.00
+Object Oriented Design with Java,380.00
+Advanced Operating Systems Concepts,1130.00
+Fundamentals of Algorithmics,270.00
+Digital Image Processing,350.00
+Graph Theory,150.00
+Numerical Recipes in C,400.00
+Data and File Structures,680.00

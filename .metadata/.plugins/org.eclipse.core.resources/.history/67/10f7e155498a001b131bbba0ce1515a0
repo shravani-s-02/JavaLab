@@ -1,0 +1,102 @@
+package Q_2_Numbers;
+
+import java.util.Scanner;
+
+class TestingQ2 {
+
+	static Scanner enter = new Scanner(System.in);
+	
+	public static void main(String[] args) {
+		IMTechNumberImplementation number = new IMTechNumberImplementation();
+		IMTechNumberImplementation number2 = new IMTechNumberImplementation();
+		
+		int i = 0, option = 0, numReal = 0, imag = 0;
+		
+		do{
+	        i = 0;
+	        System.out.print("Do you wish to enter a integer(enter 1) or complex number(enter 2)?");
+	        option = enter.nextInt();
+	        if(option < 1 && option > 2){
+	           System.out.print("\nOption enterered is invalid, enter 1 or 2");
+	            i++;
+	        }
+	    }while( i == 1);
+		
+		if(option == 1) {
+			int position = 0;
+			System.out.print("Enter integer value:");
+			numReal = enter.nextInt();
+			
+			IMTechInteger integer = new IMTechInteger(numReal);
+			System.out.print("Enter value to perform with arthmetic operations and compare to:" );
+			int intCompared = enter.nextInt();
+			do {
+				i = 0;
+				System.out.print("Enter positon to find digit at:");
+				position = enter.nextInt();
+				if( String.valueOf(position).length() < 0 ||  String.valueOf(position).length() > integer.getNumDigits() ) {
+					System.out.print("There are only" + integer.getNumDigits() + "digits. Enter a number between 1 and " + integer.getNumDigits());
+					i++;
+				}
+			}while(i == 1);
+			
+			number.setNum(numReal);
+			
+			System.out.print("\nNumber entered is equal to " + numReal  + ":" + number.equals(intCompared));
+			System.out.print("\nIs the number entered is less than(-1), equal to(0) or greater than " + numReal +":" + number.compareTo(intCompared));
+			System.out.print("\nAddition of " + numReal + " and "+ intCompared + ":" + number.addTo(intCompared));
+			System.out.print("\nSubtraction of " + numReal + " by "+ intCompared + ":" + number.subFrom(intCompared));
+			System.out.print("\nMultiplication of " + numReal + " with "+ intCompared + ":" + number.multWith(intCompared));
+			System.out.print("\nDivision of" + numReal + " by "+ intCompared + ":" + number.divideBy(intCompared));
+			
+			System.out.print("\nDigit at " + position + ":" + integer.getDigit(position));
+			System.out.print("\nNumber entered is a prime number:" + integer.isPrime());
+			
+		}
+		
+		else {
+			System.out.print("Enter the real part of the complex number:");
+			numReal = enter.nextInt();
+			System.out.print("Enter the imaginary part of the complex number:");
+			imag = enter.nextInt();
+			
+			IMTechComplex complex = new IMTechComplex(numReal, imag);
+			
+			System.out.print("Enter real part of the complex number to perform with arthmetic operations and compare to:");
+			int realCompared = enter.nextInt();
+			System.out.print("Enter imaginary part of the complex number to perform with arthmetic operations and compare to:");
+			int imagCompared = enter.nextInt();
+			
+			number.setNum(numReal);
+			number2.setNum(imag);
+			
+			System.out.print("\nNumber entered is equal to " + numReal + "+" + imag + "i :");
+			if(number.equals(realCompared) == true && number2.equals(imagCompared) == true) {
+				System.out.print("true");
+			}
+			else {
+				number2.equals(imagCompared);
+			}
+			
+			System.out.print("\nIs the number entered is less than(-1), equal to(0) or greater than " + numReal + "+" + imag + "i:");
+			if(number.compareTo(realCompared) == 0) {
+				number2.compareTo(imagCompared);
+			}
+			else {
+				number.compareTo(realCompared);
+			}
+			
+			System.out.print("\nAddition of " + numReal + "+" + imag + "i and "+ realCompared + "+" + imagCompared + "i:" + number.addTo(realCompared) + "+" + number2.addTo(imagCompared) +"i");
+			System.out.print("\nSubtraction of " + numReal + "+" + imag + "i by "+ realCompared + "+" + imagCompared + "i:" + number.subFrom(realCompared) + "+" + number2.subFrom(imagCompared) +"i");
+			System.out.print("\nMultiplication of " + numReal + "+" + imag + "i with " + realCompared + "+" + imagCompared + "i:" + number.multWith(realCompared) + "+" + number2.multWith(imagCompared) +"i");
+			System.out.print("\nDivision of" + numReal + "+" + imag + "i by " + realCompared + "+" + imagCompared + "i:" + "i:" + number.divideBy(realCompared) + "+" + number2.divideBy(imagCompared) +"i");
+			
+			System.out.print("\nMagnitude of the complex number:" + complex.getMag());
+			
+		}
+		
+		
+		
+	}
+
+}

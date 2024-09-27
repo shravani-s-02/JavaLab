@@ -1,0 +1,58 @@
+import java.util.Scanner;
+import java.util.StringTokenizer;
+
+public class Q5_DisplayLongest {
+
+	static String findLongest(String line) {
+		String compareTo, longestToken, lastCompared;
+		StringTokenizer st = new StringTokenizer(line);
+		lastCompared = st.nextToken();
+		longestToken = lastCompared;
+		
+		while(st.hasMoreTokens()) {
+			compareTo = st.nextToken();
+			if( compareTo.length() == lastCompared.length()) {
+				longestToken = longestToken + ", " + compareTo;
+			}
+			else if(compareTo.length() > lastCompared.length()) {
+				longestToken = compareTo;
+			}
+			lastCompared = compareTo;
+		}
+		
+		return longestToken;
+	}
+	
+	public static void main(String[] args) {
+		Scanner enter = new Scanner (System.in);
+		
+		int i = 0;
+		String line, option;
+		boolean cont = true;
+		
+		while(cont == true){
+			cont = false;
+			do {
+				i = 0;
+				System.out.print ("\nDo you wish to find the longest word of a line(Find) or Exit(Done):");
+				option = enter.next();
+				if(!(option.equalsIgnoreCase("Find") || option.equalsIgnoreCase("Done"))) {
+					System.out.print("Option entered is invalid\n");
+					i++;
+				}
+			}while(i == 1);
+			
+			if(option.equalsIgnoreCase("Find")) {
+				cont = true;
+				@SuppressWarnings("unused")
+				String aString = enter.nextLine();
+				
+				System.out.print("Enter a line:");
+				line = enter.nextLine();
+				System.out.print("Longest Token/:" + findLongest(line));
+				System.out.print("\n");
+			}
+		}
+		enter.close();
+	}
+}

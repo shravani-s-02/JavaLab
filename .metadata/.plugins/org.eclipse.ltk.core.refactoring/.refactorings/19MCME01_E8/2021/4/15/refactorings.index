@@ -1,0 +1,16 @@
+1617799718791	Delete element
+1617802369982	Rename local variable 'j'
+1617802378504	Rename local variable 'i'
+1617802384055	Rename local variable 'end'
+1617817339631	Rename local variable 'compare'
+1617817988372	Move compilation unit
+1617818033783	Delete element
+1617822648073	Rename local variable 'compareTo'
+1617944470267	Delete element
+1617944496469	Rename method 'addPadding'
+1617975762654	Rename type 'Q4_reverse'
+1618057813927	Move compilation unit
+1618066751173	Rename type 'LessThan5Characters'
+1618066759227	Rename type 'MoreThan5Characters'
+1618078670262	Rename method 'displayProducedWords'
+1618078752585	Rename local variable 'option'

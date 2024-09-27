@@ -1,0 +1,17 @@
+1619356895415	Rename resource 'GermanFlag.png'
+1619360590488	Delete element
+1619360604282	Delete element
+1619364942595	Rename type 'Q_7_Pin'
+1619366466560	Rename type 'TextDetailsDisplay'
+1619366518226	Rename type 'DisplayTextDetails'
+1619370412095	Rename field 'enterPin'
+1619370532574	Rename local variable 'addToPin'
+1619371222078	Rename field 'displayedPin'
+1619377207843	Rename package 'Q4_PinVerification'
+1619444647661	Delete element
+1619444653130	Delete element
+1619444673303	Delete element
+1619449819539	Rename type 'PinVerification'
+1619669600491	Rename field 'countryName'
+1619669686409	Rename local variable 'image1'
+1619669698087	Rename local variable 'image2'

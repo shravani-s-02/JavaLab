@@ -1,0 +1,75 @@
+
+import java.awt.Button;
+import java.awt.Frame;
+import java.awt.Label;
+import java.awt.TextField;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class Q1_CelciusAndFarenheitConvertor {
+	
+	 
+    Label temperature, result;
+	Button convert, mode;
+	TextField enterTemperature;
+	String ctof = "C->F";
+	String ftoc = "F->C";
+	
+	class TempUnitConvertor{
+		TempUnitConvertor(){
+		      Frame converter = new Frame();       
+		
+		      mode = new Button(ctof);
+		      convert = new Button("Convert");
+		      enterTemperature = new TextField(10);
+		      result = new Label();
+		      mode.setBounds(200,100, 100,20);
+		      enterTemperature.setBounds(200,150, 100,20);
+		      convert.setBounds(200,200,100,20);
+		      result.setBounds(200,250,100,20);
+		      
+		      mode.addActionListener(new ActionListener(){
+		    	  public void actionPerformed(ActionEvent e) {
+		    		  if(e.getActionCommand().equals(ftoc))
+		    			  mode.setLabel(ctof);
+		    		  if(e.getActionCommand().equals(ctof))
+		    			  mode.setLabel(ftoc);
+		    	  }
+		      });
+		      
+		      convert.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					String conv = mode.getLabel();
+					Double temp = Double.valueOf(enterTemperature.getText());
+					String resultTemp = "";
+					if (conv.equals(ctof)) {
+						temp = ((9*temp)/5) + 32;
+						resultTemp = "Farenheit : " + temp;
+					}
+					if (conv.equals(ftoc)) {
+						temp = (temp - 32) * (5/9);
+						resultTemp = "Celcius : " + temp;
+					}
+					result.setText(resultTemp.toString());
+				}
+		      });
+		      
+		      converter.add(convert);
+		      converter.add(mode);
+		      converter.add(enterTemperature);
+		      converter.add(result);
+		      
+		      converter.setSize(500, 500);  
+		      converter.setLayout(null); 
+		      converter.setVisible(true);  
+		}
+	}
+	
+	public static void main(String[] args) {
+		Q1_CelciusAndFarenheitConvertor Q1 = new Q1_CelciusAndFarenheitConvertor();
+
+		TempUnitConvertor ex = Q1.new TempUnitConvertor();
+
+	}
+
+}

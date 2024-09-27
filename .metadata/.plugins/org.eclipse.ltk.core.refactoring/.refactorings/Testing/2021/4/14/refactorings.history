@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;cat.readTeating&apos; to &apos;readTesting&apos;&#x0D;&#x0A;- Original project: &apos;Testing&apos;&#x0D;&#x0A;- Original element: &apos;cat.readTeating&apos;&#x0D;&#x0A;- Renamed element: &apos;cat.readTesting&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;readTeating&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;cat{readTeating.java[readTeating" matchStrategy="1" name="readTesting" qualified="false" references="true" similarDeclarations="false" stamp="1617443047692" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,9 @@
+Potatoes,10.00
+Onions,8.00
+Tomatoes,16.00
+Capsicum,40.00
+Lauki,18.00
+Arbi,44.00
+Brinjal,24.00
+Beans,48.00
+Carrots,40.00

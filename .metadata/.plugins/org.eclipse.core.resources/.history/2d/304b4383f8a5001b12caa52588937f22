@@ -1,0 +1,109 @@
+package Q4_Lock;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class VerifyPin {
+	JFrame pinVerification;
+	JTextField displayEnter; 
+	JButton[] button = new JButton[10];
+	JButton clear = new JButton("CLEAR"), enter = new JButton("Enter");
+	String enteredPin = "";
+	
+	@SuppressWarnings("serial")
+	public class VerifyPinEntered extends JFrame implements WindowListener, ActionListener{
+		VerifyPinEntered(){
+			PinVerification PIN = new PinVerification();
+			pinVerification = new JFrame("Electronic Lock");
+			displayEnter = new JTextField("");
+			
+			displayEnter.setBounds(1, 1, 285, 40);
+
+			ActionListener pinEnterListener = new ActionListener() {
+		        @Override
+				public void actionPerformed(ActionEvent e) {
+		        	enteredPin += e.getActionCommand();
+		  
+		        	displayEnter.setText(displayEnter.getText() + "*");
+		        }
+		    };
+		    
+			for(int i = 0; i < 10; i++) {
+				button[i] = new JButton(String.valueOf(i));
+				button[i].addActionListener(pinEnterListener);
+			}
+			
+			enter.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					if(PIN.Verify(enteredPin)){
+						displayEnter.setText("OPEN");
+					}
+					else {
+						displayEnter.setText("WRONG PIN");
+					}
+				}
+			});
+			
+			clear.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					displayEnter.setText("CLOSE");
+				}
+			});
+			
+			pinVerification.addWindowListener((WindowListener) new WindowAdapter() {
+		        public void windowClosing(WindowEvent e) {
+		        	pinVerification.dispose();
+		            System.exit(0);
+		     	}
+			});
+			
+			button[1].setBounds(1, 41, 95, 40);
+			button[2].setBounds(96, 41, 95, 40);
+			button[3].setBounds(191, 41, 95, 40);
+			button[4].setBounds(1, 81, 95, 40);
+			button[5].setBounds(96, 81, 95, 40);
+			button[6].setBounds(191, 81, 95, 40);
+			button[7].setBounds(1, 121, 95, 40);
+			button[8].setBounds(96, 121, 95, 40);
+			button[9].setBounds(191, 121, 95, 40);
+			clear.setBounds(1, 161, 95, 40);
+			button[0].setBounds(96, 161, 95, 40);
+			enter.setBounds(191, 161, 95, 40);
+			
+			pinVerification.add(enter);
+			pinVerification.add(clear);
+			for(int i = 0; i < 10; i++) {
+				pinVerification.add(button[i]);
+			}
+			pinVerification.add(displayEnter);
+			
+			pinVerification.setSize(300, 240);
+			pinVerification.setLayout(null);
+			pinVerification.setVisible(true);
+		}
+		
+		public void windowClosing(WindowEvent e) {}
+		public void actionPerformed(ActionEvent e) {}
+		public void windowOpened(WindowEvent e) {}
+		public void windowClosed(WindowEvent e) {}
+		public void windowIconified(WindowEvent e) {}
+		public void windowDeiconified(WindowEvent e) {}
+		public void windowActivated(WindowEvent e) {}
+		public void windowDeactivated(WindowEvent e) {}
+	}
+	
+	@SuppressWarnings("unused")
+	public static void main(String[] args) {
+		VerifyPin Q2 = new VerifyPin();
+		
+		VerifyPinEntered display = Q2.new VerifyPinEntered();
+	}
+
+}

@@ -1,0 +1,38 @@
+1617274905909	Rename package 'Exceptions'
+1617276248387	Rename field 'veg_list'
+1617276265766	Rename field 'veg_costs'
+1617283423943	Rename resource 'VegetablePrices.txt'
+1617283733575	Rename package 'Shopping'
+1617285080326	Rename package 'InheritanceShopping'
+1617285090092	Rename package 'NonInheritanceShopping'
+1617285111918	Rename package 'NInheritanceShopping'
+1617285304049	Rename package 'InheritanceShopping'
+1617285315260	Rename package 'NonInheritanceShopping'
+1617285355677	Move compilation unit
+1617285719380	Rename type 'shops'
+1617285812902	Copy package
+1617285818838	Delete element
+1617285841546	Delete elements
+1617348884629	Rename field 'veg_quants'
+1617350201233	Rename method 'setVegetables'
+1617350215151	Rename method 'checkVeg'
+1617350229718	Rename method 'listVeg'
+1617350243790	Rename method 'addVeg'
+1617350264099	Rename local variable 'veg'
+1617350275144	Rename local variable 'vegNum'
+1617350328796	Rename local variable 'vegNum'
+1617350343368	Rename local variable 'vegName'
+1617350353842	Rename local variable 'vegQuant'
+1617350361964	Rename local variable 'veg'
+1617350369647	Rename local variable 'itemveg'
+1617350378033	Rename local variable 'veg'
+1617350389589	Rename local variable 'veg'
+1617350400609	Rename local variable 'vegNum'
+1617364485237	Copy file
+1617373377740	Delete element
+1617373389824	Rename package 'InheritanceShops'
+1617373433421	Delete element
+1617373446261	Rename type 'testingInheritanceShopping'
+1617439978623	Rename local variable 'option'
+1617443708666	Copy file
+1617445156834	Rename type 'Shops'

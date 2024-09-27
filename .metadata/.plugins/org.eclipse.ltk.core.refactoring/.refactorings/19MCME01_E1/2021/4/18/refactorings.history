@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Q_7_Pin.java&apos; to &apos;19MCME01_E9/src/Q4_PinVerification&apos;&#x0D;&#x0A;- Original project: &apos;19MCME01_E1&apos;&#x0D;&#x0A;- Destination element: &apos;19MCME01_E9/src/Q4_PinVerification&apos;&#x0D;&#x0A;- Original element: &apos;Q_7_Pin.java&apos;" description="Copy compilation unit" destination="=19MCME01_E9/src&lt;Q4_PinVerification" element1="/src&lt;{Q_7_Pin.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1619364902674" units="1" version="1.0"/>
+</session>

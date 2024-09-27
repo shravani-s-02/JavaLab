@@ -1,0 +1,6 @@
+A set is a collection of unique elements.
+Several set implementations: HashSet and TreeSet.
+HashSet represents the collection that uses a hash table for storage: Hashing is used to store the elements in the HashSet.
+SortedSet interface provides a total ordering on its elements.
+The access and retrieval times of TreeSet are quite fast.
+The elements in TreeSet are stored in ascending order.

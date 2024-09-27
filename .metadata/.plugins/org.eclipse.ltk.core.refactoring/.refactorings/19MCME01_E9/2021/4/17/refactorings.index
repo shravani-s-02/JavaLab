@@ -1,0 +1,14 @@
+1619110806824	Rename local variable 'fr'
+1619111116497	Move compilation unit
+1619191354116	Copy compilation unit
+1619191362598	Delete element
+1619198689128	Rename local variable 'rsltTemp'
+1619261059478	Rename local variable 'ex'
+1619262914743	Rename compilation unit 'Q2_Text_Analysis.java'
+1619263689717	Rename local variable 'Q1'
+1619263860370	Rename local variable 'TempUnitConvertor'
+1619272981993	Rename field 'wordNum'
+1619273695937	Move compilation unit
+1619274967905	Rename type 'Q2_TextDetails'
+1619280700702	Move compilation unit
+1619281033589	Rename type 'Q3_Flags'

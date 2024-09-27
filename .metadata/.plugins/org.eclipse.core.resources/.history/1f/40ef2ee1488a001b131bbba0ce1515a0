@@ -1,0 +1,50 @@
+package Q_2_Numbers;
+
+public class IMTechNumberImplementation implements IMTechNumber {
+	int number = 0;
+	
+	public void setNum(int num) {
+		number = num;
+	}
+	public double getNum() {
+		return number;
+	}
+	
+	public String toString() {
+		return "Value is" + number;
+	}
+	
+	public boolean equalsTo(Object num) {
+		//if(this.getClass().getName().equals(num.getClass().getName())) {
+		if( number == ((IMTechNumberImplementation)num).getNum() ) {
+			return true;
+		}
+		return false;
+	}
+	
+	public int compareTo(Object num) {
+		if( number == ((IMTechNumberImplementation)num).getNum()) {
+			return 0;
+		}
+		else if(number > ((IMTechNumberImplementation)num).getNum()) {
+			return -1;
+		} 
+		return 1;
+	}
+	
+	public double addTo(Object num) {
+		return number + ((IMTechNumberImplementation)num).getNum();
+	}
+	
+	public double subFrom(Object num) {
+		return ((IMTechNumberImplementation)num).getNum() - number;
+	}
+	
+	public double multWith(Object num) {
+		return number * ((IMTechNumberImplementation)num).getNum();
+	}
+	
+	public double divideBy(Object num) {
+		return number / ((IMTechNumberImplementation)num).getNum();
+	}
+}

@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class Q2_Palindrome {
+
+	static void checkIfPalindrome(String input) {
+		StringBuffer sb = new StringBuffer(input);
+		
+		if(input.equals(sb.reverse().toString())) {
+			System.out.print(input + " is a palindrome.\n");
+			return;
+		}
+		
+		System.out.print(input + " is not a palindrome.\n");
+	}
+	
+	public static void main (String args[]) {
+		Scanner enter = new Scanner (System.in);
+		
+		boolean cont = true;
+		int i = 0;
+		String option, input;
+		
+		while(cont == true) {
+			cont = false;
+			do {
+				i = 0;
+				System.out.print("\nDo you wish to,\nEnter word to check if palindrome(check)\nExit(done)\nEnter:");
+				option = enter.next();
+				if(!(option.equalsIgnoreCase("check") || option.equalsIgnoreCase("done"))) {
+					System.out.print("Opton entered is invalid enter.\n");
+					i++;
+				}
+			}while(i == 1);
+			
+			if(option.equalsIgnoreCase("check")){
+				cont = true;
+				System.out.print("\nEnter word to check:");
+				input = enter.next();
+				checkIfPalindrome(input);
+			}
+		}
+		enter.close();
+	}	
+}

@@ -1,0 +1,9 @@
+Bananas,3.00
+Apples,20.00
+Pears,24.00
+Kiwi,16.00
+Strawberry,12.00
+Papaya,50.00
+Anar,16.00
+Oranges,5.00
+Mango,30.00

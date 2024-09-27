@@ -1,0 +1,64 @@
+
+import java.awt.Button;
+import java.awt.FlowLayout;
+import java.awt.Frame;
+import java.awt.Label;
+import java.awt.TextField;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class Q1_CelciusAndFarenheitConvertor {
+	
+	 
+    Label temperature, result;
+	Button convert, mode;
+	TextField enterTemperature;
+	String ctof = "C->F";
+	String ftoc = "F->C";
+	
+	class TempUnitConvertor{
+		TempUnitConvertor(){
+		      Frame converter = new Frame();       
+		
+		      mode = new Button(ctof);
+		      convert = new Button("Convert");
+		      enterTemperature = new TextField(10);
+		      result = new Label("Answer");
+		      mode.setBounds(50,100, 100,20);
+		      convert.setBounds(50,150,100,20);
+		      enterTemperature.setBounds(50,200, 100,20);
+		      result.setBounds(50,250,100,20);
+		      
+//		      mode.setBounds(50,50,50,50);
+		      mode.addActionListener(new ActionListener(){
+		    	  public void actionPerformed(ActionEvent e) {
+		    		  if(e.getActionCommand().equals(ftoc))
+		    			  mode.setLabel(ctof);
+		    		  if(e.getActionCommand().equals(ctof))
+		    			  mode.setLabel(ftoc);
+		    	  }
+		      });
+		      
+//		      temperature = new Label();
+		      
+		      //convert.addActionListener(this);
+		      
+		      converter.add(convert);
+		      converter.add(mode);
+		      converter.add(enterTemperature);
+		      converter.add(result);
+		      
+		      converter.setSize(500, 500);  
+		      converter.setLayout(null); //new FlowLayout());
+		      converter.setVisible(true);  
+		}
+	}
+	
+	public static void main(String[] args) {
+		Q1_CelciusAndFarenheitConvertor Q1 = new Q1_CelciusAndFarenheitConvertor();
+
+		TempUnitConvertor ex = Q1.new TempUnitConvertor();
+
+	}
+
+}

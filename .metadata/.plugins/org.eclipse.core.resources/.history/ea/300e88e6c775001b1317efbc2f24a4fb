@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Q_1_NaturalNumbersSum {
+
+	public static void main(String[] args) {
+		
+		Scanner num = new Scanner(System.in);
+		
+		System.out.print("Enter the number of (first) natural numbers to fined the sum of:");
+        int n = num.nextInt();
+        num.close();
+        
+        int sum = 0, i;
+        for( i = 1; i < n+1; i++ ) {
+        	 sum += i; 	
+        }
+        
+        System.out.print("Sum of first " + n +" natural numbers is " + sum);
+	}
+
+}
